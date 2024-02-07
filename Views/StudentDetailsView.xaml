@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ShellLesson.ViewModels"
+             x:Class="ShellLesson.Views.StudentDetailsView"
+             x:DataType="vm:StudentDetailsViewModel"
+             Title="Student Details">
+    <VerticalStackLayout>
+        <Grid Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" RowSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0"
+                               Text="{Binding SelectedStudent.FirstName}" HorizontalOptions="Center"
+                               FontAttributes="Bold"/>
+            <Label Grid.Column="0" Grid.Row="1"
+                               Text="{Binding SelectedStudent.LastName}" 
+                               FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Grid.Column="0" Grid.Row="2"
+                               Text="{Binding SelectedStudent.BirthDate, StringFormat='{0:MMMM dd, yyyy}'}" 
+                               FontAttributes="Italic" HorizontalOptions="Center"/>
+            <Label Grid.Column="0" Grid.Row="3"
+                               Text="{Binding SelectedStudent.AverageScore}" 
+                               FontAttributes="None" 
+                               HorizontalOptions="Center"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
