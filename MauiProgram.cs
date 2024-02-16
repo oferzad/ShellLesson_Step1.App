@@ -1,5 +1,4 @@
-﻿using Bumptech.Glide.Load;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using ShellLesson.Services;
 using ShellLesson.ViewModels;
 using ShellLesson.Views;

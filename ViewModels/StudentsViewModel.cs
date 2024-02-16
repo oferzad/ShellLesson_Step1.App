@@ -1,5 +1,4 @@
-﻿using Bumptech.Glide.Load;
-using ShellLesson.Models;
+﻿using ShellLesson.Models;
 using ShellLesson.Services;
 using System;
 using System.Collections.Generic;
@@ -65,9 +64,10 @@ namespace ShellLesson.ViewModels
             if (SelectedStudent != null)
             {
                 var navParam = new Dictionary<string, object>()
-            {
-                { "selectedStudent",SelectedStudent}
-            };
+                {
+                    { "selectedStudent",SelectedStudent}
+                };
+
                 //Add goto here to show details
                 await Shell.Current.GoToAsync($"studentDetails", navParam);
                 
